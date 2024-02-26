@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<link rel="stylesheet" href="s.css">
+    <div class="hero-unit">
+        <h1>JS</Br> Tutorials</h1>
+    </div>
+
+    <div id="peopleModule">
+        <h2>People</h2>
+        <!-- whats this? <input type="text" name="" id=""> -->
+        <input placeholder="Name" type="text">
+        <Button id="addPerson">Add Person</Button>
+        <ul id="people">
+        <script id="people-template" type="text/template">
+                {{people}}
+                <li> 
+                    <span>{{.}}</span>
+                    <i class="del">X</i>
+                </li>
+                {{/people}}
+        </script>
+        </ul>
+    </div>
+    <script src="srpt/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js"></script>
+    <script src="srpt/.js"></script>
+</body>
+</html>
