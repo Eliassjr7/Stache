@@ -1,17 +1,14 @@
 var people = [];
 var template = $('#people-template').html();
-
-$(document).ready('#peopleModule').find('button').on('click', function() {
+$('#peopleModule').find('button').on('click', function() {
     people.push($('#peopleModule').find('input').val());
     $('#peopleModule').find('input').val('');
     // data for mustache template
-    var data = {
-        people: people,
-    };
+    var data = {people: people,};
     $('#peopleModule').find('ul').html(Mustache.render(template, data));
 });
 
-$(document).ready('#peopleModule').find('ul').delegate('i.del', 'click', function(e) {
+$('#peopleModule').find('ul').delegate('i.del', 'click', function(e) {
     var $remove = $(e.target).closest('li');
     var i = $('#peopleModule').find('ul').find('li').index($remove);
 
