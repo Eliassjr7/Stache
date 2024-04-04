@@ -4,59 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
+    <style>
+        .tabs{
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+        }
+        .tab-panels ul {
+            margin:0;
+            padding:0;
+        }
+        .tab-panels ul li{
+            list-style-type: none;
+            display: inline-block;
+            background:none;
+            margin: 0;
+            padding: 5px 20px;
+            color:black;
+            font-weight: 700;
+            cursor: pointer;
+            position: relative;
+            padding-bottom: 25px;
+        }li::after{
+            content:"";
+            position:absolute;
+            left: 50%;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background-color: black;
+            transition: 0.3s ease, left 0.3s ease;
+            transform:translateX(-50%);
+        }
+        .tab-panels ul li.active:hover::after{
+            color:black;
+            width: 100%;
+        }
+        .tab-panels .panel{
+            display: none;
+            padding: 30px;
+        
+        }
+        .tab-panels .panel.active{
+            display: hide; 
+         }  
+    
+    </style>
 </head>
 <!-- <link rel="stylesheet" href="s.css"> -->
-<h2>Home;)</h2>
-<style>
-    .tabs{
-        margin: 0;
-        padding: 0;
-    }
-    .tab-panels ul {
-        margin: 0;
-        padding: 0;
-    }
-    .tab-panels ul li{
-        list-style-type: none;
-        display: inline-block;
-        background: #b9b6b6;
-        margin: 0;
-        padding: 3px 10px;
-        border-radius: 10px 10px 0 0;
-        color:white;
-        font-weight: 200;
-        cursor: pointer;
-    }
-    .tab-panels ul li.active:hover{
-        color:#fff;
-        background:rgb(26, 24, 24);
-    }
-    /* .tab-panels ul li.active{
-        color:#fff;
-        background:grey;
-    }  */
-    .tab-panels .panel{
-        display: none;
-        background: #c9c9c9;
-        padding: 30px;
-        border-radius: 0 10px 10px 10px;
-    }
-    .tab-panels .panel.active{
-        display: hide; 
-     }  
-
-</style>
 <body>
-    <P>Welcome Guest</P>  
-    <!-- <button> <a href=".html"> testing</a></button> -->
-    <div class="tab-panels">
-        <ul class="tabs">
-            <li rel="panel1" class="active">panel1</li>
-            <li rel="panel2">panel2</li>
-            <li rel="panel3">panel3</li>
-            <li rel="panel4">panel4</li>
+  <header> <div class="tab-panels">
+        <ul class="tabs"><h1>sfp5 beta</h1>
+            <li rel="panel1" class="active">MEN'S</li>
+            <li rel="panel2">WOMEN'S</li>
+            <li rel="panel3">ACCESSORIES</li>
         </ul>
         <div id="panel1" class="panel active">
+            content1</br>
             content1</br>
             content1</br>
             content1</br>
@@ -69,6 +73,7 @@
             content2</br>
             content2</br>
             content2</br>
+            content2</br>
         </div>
         <div id="panel3"  class="panel">
             content3</br>
@@ -76,71 +81,48 @@
             content3</br>
             content3</br>
             content3</br>
-        </div>
-        <div id="panel4"  class="panel">
-            content4</br>
-            content4</br>
-            content4</br>
-            content4</br>
-            content4</br>
+            content3</br>
         </div>
     </div>
-    <!-- <div class="tab-panels">
-        <ul class="tabs">
-            <li rel="panel5" class="active">panel5</li>
-            <li rel="panel6">panel6</li>
-            <li rel="panel7">panel7</li>
-            <li rel="panel8">panel8</li>
-        </ul>
-        <div id="panel5" class="panel active">
-            content5</br>
-            content5</br>
-            content5</br>
-            content5</br>
-            content5</br>
-        </div>
-        <div id="panel6" class="panel">
-            content6</br>
-            content6</br>
-            content6</br>
-            content6</br>
-            content6</br>
-        </div>
-        <div id="panel7"  class="panel">
-            content7</br>
-            content7</br>
-            content7</br>
-            content7</br>
-            content7</br>
-        </div>
-        <div id="panel8"  class="panel">
-            content8</br>
-            content8</br>
-            content8</br>
-            content8</br>
-            content8</br>
-        </div>
-    </div> -->
+</header> 
+    
     <script src="srpt/jquery-3.7.1.js"></script> 
-    <script>
+<script>
 
-       $(function() {
 
-            $('.tab-panels .tabs li').mouseenter(function(){
-                $('tab-panels .tab li.active').removeClass('active');
-                $(this).addClass('active');
-                $('.panel').hide(500);
-                var panelToShow = $(this).attr('rel');
-                $('#'+panelToShow).show(300).mouseleave(function(){
-                    $('#'+panelToShow).hide(500)
-                });
-            });
-       });
+$(function() {
+
+    $('.tab-panels .tabs li').mouseenter(function(){
+        var $panel = $(this).closest('.tab-panels');
+            $panel.find('.tab li.active').removeClass('active');
+                $(this).addClass('active').siblings('li').css('color','lightgrey');
+                    $(this).css('color','black');
+                $('.panel').hide();
+        var panelToShow = $(this).attr('rel');
+            $('#'+panelToShow).show(300).mouseleave(function(){
+                $('#'+panelToShow).hide(500);
+                    $('li').css ('color','black')
+        });
+    });
+});
+    //    $(function() {
+
+    //         $('.tab-panels .tabs li').mouseenter(function(){
+    //             var $panel = $(this).closest('.tab-panels');
+    //                 $panel.find('.tab li.active').removeClass('active');
+    //                     $(this).addClass('active');
+    //                         $('.panel').hide();
+    //             var panelToShow = $(this).attr('rel');
+    //                 $('#'+panelToShow).show(300).mouseleave(function(){
+    //                     $('#'+panelToShow).hide(500)
+    //             });
+    //         });
+    //    });
 // which panel to hide
         
 // show new panel
         
 
-    </script>
+</script>
 </body>
 </html>
