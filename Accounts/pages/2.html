@@ -6,15 +6,48 @@
     <title>Document</title>
 </head>
 <style>
+        body{
+        margin: 0;
+        padding: 0;
+        }
         header{
             position:fixed;
             left: 0;
             right: 0;
             width: 100%;
             z-index: 1;
-            margin-top: -8px;
+            margin-top: -16px;
         }
+        nav{
+        text-align: right;
+        background-color: rgb(236, 236, 236);
        
+        
+        }
+        nav .nav, a{
+            color: gray;
+            margin: px;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        a:hover{
+            color: black;
+        }
+        .nav .nl {
+            display: inline-block;
+            border: 1px gray solid;
+            border-left: none;
+            border-bottom: none;
+            border-top: none;
+            margin: 0 50px 0 -50px;
+            padding:9px 7px;
+            
+
+        }
+        .nav .nl:last-child{
+            border-right: none;
+        }
         .tabs{
             text-align: center;
             margin: 0;
@@ -22,7 +55,7 @@
             background-color:white ;
         }
         .tab-panels ul {
-            margin:0;
+            margin-top:-16px;
             padding:0;
         }
         .tab-panels ul li{
@@ -61,7 +94,7 @@
         }
 
         div.container{
-            padding-top: 40px;
+            padding-top: 120px;
         }
 
         /* nav men women accesorys */
@@ -102,7 +135,7 @@ button{
 
 
 
-#productslider{
+.productslider{
     background: white;
     color: black;
     padding: 20px;
@@ -120,7 +153,7 @@ button{
     margin-left: -30px;
     padding: 0;
 }
-#productslider .productslide{
+.productslider .productslide{
     margin: 40px 20px;
     text-align: center;
     height: 400px;
@@ -128,20 +161,39 @@ button{
     float: left;
     list-style-type: none;
 }
-#productslider .productslide img{
+.productslider .productslide img{
     border-radius: 10px;
     box-shadow:grey 0px 0px 20px ;
     width: 300px;
 }
-
+section.img{
+    background-color: black;
+    width: 1520px;
+    background-size: 100%; 
+    background-position: center; 
+    background-repeat: no-repeat;   
+    height: 800px;
+}
 </style>
 <body>
+    
     <header>
+        <nav>
+            <ul class="nav">
+                <li class="nl"><a href="Log In.html">Account</a></li>
+                <li class="nl">Accessibility Statement</li>
+                <li class="nl">Help</li>
+                <li class="nl"><a href="Create Account.html">Email Sign Up</a></li>
+                <li class="nl">Blog</li>
+                <li class="nl">US</li>
+                <li class="nl">English </li>
+            </ul>
+        </nav>
         <div class="tab-panels">
               <ul class="tabs">
-                  <li rel="panel1" class="active">WOMEN'S</li>
-                  <li rel="panel2">MEN'S</li>
-                  <li rel="panel3">ACCESSORIES</li>
+                  <li rel="panel1" class="tl active">WOMEN'S</li>
+                  <li rel="panel2" class="tl ">MEN'S</li>
+                  <li rel="panel3" class="tl ">ACCESSORIES</li>
               </ul>
               <div id="panel1" class="panel active">
                   content1</br>
@@ -186,12 +238,13 @@ button{
             </div>
     </div>
 </section>
-<section= id="productslider">
+<section>
+<section id="productslider1" class="productslider">
     <div class="btn">
-    <button class="btnsL"><</button>
-    <button class="btnsR">></button>
+    <button rel="#productslides1" class="btnsL"><</button>
+    <button rel="#productslides1" class="btnsR">></button>
     </div>
-    <ul class="productslides">
+    <ul id ="productslides1" class="productslides">
         <figure class="productslide">
             <img src="photos/fysique.jpg" alt="fysique">
                 <figcaption>FYSIQUE</figcaption>
@@ -268,6 +321,288 @@ button{
         </figure>
     </ul>
 </section>
+</section>
+<section class="img" style="background-image:url(photos/admpt2.jpg);">
+    <div>
+    hey this is for testing
+    </div><div>
+        hey this is also testing get below the slider
+    </div>
+</section>
+<section>
+    <section id="productslider2" class="productslider">
+        <div class="btn">
+        <button rel="#productslides2" class="btnsL"><</button>
+        <button rel="#productslides2" class="btnsR">></button>
+        </div>
+        <ul id="productslides2" class="productslides">
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+               <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure> 
+        
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure> 
+        
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+    
+            <figure class="productslide">
+                <img src="photos/fysique.jpg" alt="fysique">
+                    <figcaption>FYSIQUE</figcaption>
+            </figure>
+        </ul>
+    </section>
+    </section>
+    <section class="img" style="background-image:url(photos/fart.webp);">
+        <div>
+        hey this is for testing
+        </div><div>
+            hey this is also testing get below the slider
+        </div>
+    </section>
+    <section>
+        <section id="productslider3" class="productslider">
+            <div class="btn">
+            <button rel="#productslides3" class="btnsL"><</button>
+            <button rel="#productslides3" class="btnsR">></button>
+            </div>
+            <ul id="productslides3" class="productslides">
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                   <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure> 
+            
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure> 
+            
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+            </ul>
+        </section>
+        </section>
+    <section class="img" style="background-image:url(photos/original.webp);">
+        <div>
+        hey this is for testing
+        </div><div>
+            hey this is also testing get below the slider
+        </div>
+    </section>
+    <section>
+        <section id="productslider4" class="productslider">
+            <div class="btn">
+            <button rel="#productslides4" class="btnsL"><</button>
+            <button rel="#productslides4" class="btnsR">></button>
+            </div>
+            <ul id="productslides4" class="productslides">
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                   <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure> 
+            
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure> 
+            
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+        
+                <figure class="productslide">
+                    <img src="photos/fysique.jpg" alt="fysique">
+                        <figcaption>FYSIQUE</figcaption>
+                </figure>
+            </ul>
+        </section>
+        </section>
+<section class="img" style="background-image:url(photos/3.jpg);">
+            <div>
+            hey this is for testing
+            </div><div>
+                hey this is also testing get below the slider
+            </div>
+</section>
+        
 </body>
 <script src="srpt/jquery-3.7.1.js"></script> 
 <script>
@@ -305,10 +640,8 @@ $slider.on('mouseenter', stopSlider).on('mouseleave', startSlider);
 startSlider();
 });
 
-
-
-// fix the mouseleave reenter into the same li it should hide and show if you're on the same li 
-   $(function() {
+// fix the mouseleave from the top if it enters into another element like the nav 
+$(function() {
 
          $('.tab-panels .tabs li').mouseenter(function(){
              var $panel = $(this).closest('.tab-panels');
@@ -319,126 +652,173 @@ startSlider();
              var panelToShow = $(this).attr('rel');
                  $('#'+panelToShow).show().mouseleave(function(){
                      $('#'+panelToShow).hide();
-                         $('li').css ('color','black')
+                         $('.tl').css ('color','black')
              });
          });
     });
 
 
-// $(function(){
+//  $(function(){
+
+
+//      $('.productslider',function(){
+//         // find id of productslides to slide
+
+//         // assign the btns
+//         $('.btnsL').click(function(){
+//             $('.productslide').animate({'margin-left':'+=450'},100)
+//         })
         
-//     var currentSlide = 0;
-//     var totalSlides = 15;
-//    $('.btnsR').click(function(){
-//              $('#productslider .productslides').animate({'margin-left':'-=450'},100)});
- 
-//    $('.btnsL').click(function(){
-//              $('#productslider .productslides').animate({'margin-left':'+=450'},100)});
-// });
-    
-
-// $(function(){ 
-
-//     var width = 450;
-//     var animationSpeed = 100;
-//     var currentSlide = 1;
-//     // var pause = 1000; dont really need this.
-    
-//     var $proslider = $('#productslider');
-//     var $proslideContainer = $proslider.find('.productslides');
-//     var $proslides = $proslideContainer.find('.productslide');
-
-//      $('.btnsR').on('click', function(){
-//          $proslideContainer.animate({'margin-left':'-='+width},animationSpeed, function(){
-//             currentSlide++;
-//              if (currentSlide === $proslides.length){
-//                  currentSlide = 1;
-//                  $proslideContainer.css('margin-left',0);
-//              }
-//          });
-//      });
-//      $('.btnsL').on('click', function(){
-//          $proslideContainer.animate({'margin-left':'+='+width},animationSpeed);
-//      });
-    
-//     // the issue I keep running into is that the slider is not stopping on either side going back to the basic video
-    
-//  });
-// $(function(){ 
-
-// var width = 450;
-// var animationSpeed = 100;
-// var currentSlide = 1;
-// var pause = 4000;
-
-// var $proslider = $('#productslider');
-// var $proslideContainer = $proslider.find('.productslides');
-// var $proslides = $proslideContainer.find('.productslide');
-
-// var interval;
-
-// function startSlider(){
-//     interval = setInterval(function(){
-//         $proslideContainer.animate({'margin-left':'-='+width},animationSpeed, function(){
-//              currentSlide++;
-//              if (currentSlide === $proslides.length){
-//                  currentSlide = 4;
-//                  $proslideContainer.css('margin-left',-30);
-//             }
+//         $('.btnsR').click(function(){
+//             $('.productslide').animate({'margin-left':'-=450'},100)
+//         })
+        
+           
 //         });
-//      }, pause);
-// }
 
-// function stopSlider(){
-//     clearInterval(interval)
-// };
-
-//  $proslider.on('mouseenter', stopSlider).on('mouseleave', startSlider);
-
-// startSlider();
 
 // });
-$(function(){
+// $(function(){
+
+
+//       $('.productslider',function(){
+//          // find id of productslides to slide
+
+//          // assign the btns
+//          $('.btnsL').click(function(){
+//              $('.productslide').animate({'margin-left':'+=450'},100)
+//          })
         
-    var currentSlide = 0;
-    var totalSlides = 11;
+//          $('.btnsR').click(function(){
+//              $('.productslide').animate({'margin-left':'-=450'},100)
+//          })
+        
+           
+//          });
 
-function updateButtonColor(){
-if(currentSlide === 0)
-{$('button.btnsL').css('color','lightgrey').css('background-color','');
-$('button.btnsR').css('color','white');}
-else if 
-(currentSlide === totalSlides -1)
-{$('button.btnsR').css('color','lightgrey').css('background-color','');
- $('button.btnsL').css('color','white');}
-else {$('button.btnsL').css('color','white').css('background-color','black');
-      $('button.btnsR').css('color','white').css('background-color','black');}
-}
 
-    $('.btnsR').click(function(){
-        if(currentSlide < totalSlides -1)
-              {
-                $('#productslider .productslides').animate({'margin-left':'-=450'},100)
-                currentSlide++;
-                updateButtonColor();
-                }
-            });
- 
-    $('.btnsL').click(function(){
-        if(currentSlide > 0)
-              {
-                $('#productslider .productslides').animate({'margin-left':'+=450'},100)
-                currentSlide--;
-                updateButtonColor();
-                }
-            });
- });
-
-//  $('.btnsL').on('click', function(){
-    //   $proslideContainer.animate({'margin-left':'+='+width},animationSpeed);
 //  });
+
+
+//  $(function(){
+//         var currentSlide = 0;
+//         var totalSlides = 11;
+//         $('.btnsR').click(function(){
+//            var $psliderR = $(this).closest('.productslider')
+//             if(currentSlide < totalSlides -1)
+//                   {$psliderR.find('.productslides').animate({'margin-left':'-=450'},100, function(){
+//                         if(currentSlide === 0)
+//                            {$btnsL.css('color','lightgrey').css('background-color','');
+//                            $btnsR.css('color','white');}
+//                    else if (currentSlide === totalSlides -1)
+//                            {$btnsR.css('color','lightgrey').css('background-color','');
+//                            $btnsL.css('color','white');}
+//                    else {$btnsL.css('color','white').css('background-color','black');
+//                          $btnsR.css('color','white').css('background-color','black');}
+//                             });
+//                         currentSlide++;
+//                         };});
+//             $('.btnsL').click(function(){
+//                var $psliderL = $(this).closest('.productslider')
+//                 if(currentSlide > 0)
+//                       {$psliderL.find('.productslides').animate({'margin-left':'+=450'},100, function(){
+//                           if(currentSlide === 0)
+//                                 {$('button.btnsL').css('color','lightgrey').css('background-color','');
+//                                 $('button.btnsR').css('color','white');}
+//                         else if (currentSlide === totalSlides -1)
+//                                 {$('button.btnsR').css('color','lightgrey').css('background-color','');
+//                                 $('button.btnsL').css('color','white');}
+//                         else {$('button.btnsL').css('color','white').css('background-color','black');
+//                               $('button.btnsR').css('color','white').css('background-color','black');}
+//                         });
+//                         currentSlide--;
+//                         };});
+//  })
+
+
+//    var $lbtns = $(this).attr('rel')
+//    var $rbtns = $(this).attr('rel') 
+// this allows you to have the buttons assigned to the specific slider.
+//    $(function(){
+//     var $psliders = $('.productslider')
+//         $psliders.each(function(index){
+//        var currentSlide = 0;
+//        var totalSlides = 11;
+//         var $btnsL = $(this).find('button.btnsL');
+//         var $btnsR = $(this).find('button.btnsR');
+//        $btnsR.click(function(){
+//            if(currentSlide < totalSlides -1)
+//                  {$psliders.find('.productslides').animate({'margin-left':'-=450'},100, function(){
+//                        if(currentSlide === 0)
+//                                {$btnsL.css('color','lightgrey').css('background-color','');
+//                                $btnsR.css('color','white');}
+//                        else if (currentSlide === totalSlides -1)
+//                                {$btnsR.css('color','lightgrey').css('background-color','');
+//                                $btnsL.css('color','white');}
+//                        else {$btnsL.css('color','white').css('background-color','black');
+//                              $btnsR.css('color','white').css('background-color','black');}
+//                        });
+//                    currentSlide++;
+//                    };});
+//        $btnsL.click(function(){
+//            if(currentSlide > 0)
+//                  {$psliders.find('.productslides').animate({'margin-left':'+=450'},100, function(){
+//                      if(currentSlide === 0)
+//                            {$btnsL.css('color','lightgrey').css('background-color','');
+//                            $btnsR.css('color','white');}
+//                    else if (currentSlide === totalSlides -1)
+//                            {$btnsR.css('color','lightgrey').css('background-color','');
+//                            $btnsL.css('color','white');}
+//                    else {$btnsL.css('color','white').css('background-color','black');
+//                          $btnsR.css('color','white').css('background-color','black');}
+//                    });
+//                    currentSlide--;
+//                    };});});});
+
 
 // the issue I keep running into is that the slider is not stopping on either side going back to the basic video
+
+// rewatched jquery part 3 and learned how to bind the id to the rel by putting the hashtag inside of the paranthesis
+    $(function(){
+        
+
+        function setupSlider(sliderElement,totalSlides){
+                var currentSlide = 0;
+                // var totalSlides = 11;
+
+        function updateButtonColor(){
+            if(currentSlide === 0)
+                                 {$(sliderElement).find('button.btnsL').css('color','grey').css('background-color','');
+                                 $(sliderElement).find('button.btnsR').css('color','white').css('background-color','black');}
+                         else if (currentSlide === totalSlides -1)
+                                 {$(sliderElement).find('button.btnsR').css('color','grey').css('background-color','');
+                                 }
+                         else {$(sliderElement).find('button.btnsL').css('color','white').css('background-color','black');
+                               $(sliderElement).find('button.btnsR').css('color','white').css('background-color','black');}
+        }
+
+               $(sliderElement).find('button').click(function(e){
+                    var btnS = $(this).attr('rel')
+
+                    if($(this).hasClass('btnsR'))
+                    {if(currentSlide < totalSlides -1)
+                            {currentSlide++;
+                                $(btnS).animate({'margin-left':'-=450'},100);}}
+                    else if  ($(this).hasClass('btnsL')) 
+                    {if(currentSlide > 0)
+                            {currentSlide--;
+                                 $(btnS).animate({'margin-left':'+=450'},100);}}
+                updateButtonColor();
+                });
+                updateButtonColor();
+            }    
+         setupSlider('#productslider1',11);
+         setupSlider('#productslider2',11);
+         setupSlider('#productslider3',11);
+         setupSlider('#productslider4',11);
+    });
+    
+
 
 
 </script>
